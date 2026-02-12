@@ -1,0 +1,421 @@
+{
+  "design_system": {
+    "name": "iOS App Store Listing Design System",
+    "version": "1.0.0",
+    "overview": "Design system for creating polished iOS App Store product pages with modern iOS design language",
+    
+    "color_palette": {
+      "primary": {
+        "background": "#000000",
+        "surface": "#1C1C1E",
+        "elevated_surface": "#2C2C2E"
+      },
+      "accent": {
+        "primary_blue": "#007AFF",
+        "light_blue": "#5AC8FA",
+        "purple": "#AF52DE"
+      },
+      "text": {
+        "primary": "#FFFFFF",
+        "secondary": "#8E8E93",
+        "tertiary": "#636366"
+      },
+      "interactive": {
+        "link": "#0A84FF",
+        "button_background": "#0A84FF",
+        "button_text": "#FFFFFF"
+      }
+    },
+    
+    "typography": {
+      "font_family": {
+        "primary": "SF Pro Display",
+        "secondary": "SF Pro Text",
+        "fallback": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+      },
+      "hierarchy": {
+        "app_title": {
+          "size": "22px",
+          "weight": "600",
+          "line_height": "1.2",
+          "color": "text.primary"
+        },
+        "subtitle": {
+          "size": "13px",
+          "weight": "400",
+          "line_height": "1.4",
+          "color": "text.secondary"
+        },
+        "section_header": {
+          "size": "20px",
+          "weight": "700",
+          "line_height": "1.2",
+          "color": "text.primary",
+          "margin_top": "24px",
+          "margin_bottom": "12px"
+        },
+        "body_text": {
+          "size": "14px",
+          "weight": "400",
+          "line_height": "1.5",
+          "color": "text.secondary"
+        },
+        "caption": {
+          "size": "12px",
+          "weight": "400",
+          "line_height": "1.3",
+          "color": "text.tertiary"
+        },
+        "metadata_label": {
+          "size": "11px",
+          "weight": "400",
+          "line_height": "1.2",
+          "color": "text.tertiary",
+          "text_transform": "uppercase",
+          "letter_spacing": "0.5px"
+        },
+        "metadata_value": {
+          "size": "17px",
+          "weight": "600",
+          "line_height": "1.2",
+          "color": "text.primary"
+        }
+      }
+    },
+    
+    "layout": {
+      "container": {
+        "max_width": "100%",
+        "padding": "16px",
+        "background": "primary.background"
+      },
+      "spacing": {
+        "xs": "4px",
+        "sm": "8px",
+        "md": "16px",
+        "lg": "24px",
+        "xl": "32px"
+      },
+      "grid": {
+        "columns": 12,
+        "gap": "16px"
+      }
+    },
+    
+    "components": {
+      "app_header": {
+        "structure": {
+          "layout": "flex",
+          "align_items": "flex-start",
+          "gap": "16px",
+          "padding": "16px",
+          "background": "primary.surface",
+          "border_radius": "12px"
+        },
+        "elements": {
+          "app_icon": {
+            "size": "80px",
+            "border_radius": "18px",
+            "border": "0.5px solid rgba(255,255,255,0.1)",
+            "box_shadow": "0 4px 12px rgba(0,0,0,0.3)"
+          },
+          "title_section": {
+            "display": "flex",
+            "flex_direction": "column",
+            "gap": "4px",
+            "flex": 1
+          },
+          "share_button": {
+            "display": "flex",
+            "align_items": "center",
+            "gap": "6px",
+            "padding": "6px 12px",
+            "border_radius": "20px",
+            "background": "rgba(255,255,255,0.1)",
+            "font_size": "13px",
+            "font_weight": "500"
+          }
+        }
+      },
+      
+      "metadata_grid": {
+        "structure": {
+          "display": "grid",
+          "grid_template_columns": "repeat(3, 1fr)",
+          "gap": "16px",
+          "padding": "16px 0",
+          "border_top": "0.5px solid rgba(255,255,255,0.1)",
+          "border_bottom": "0.5px solid rgba(255,255,255,0.1)"
+        },
+        "metadata_item": {
+          "display": "flex",
+          "flex_direction": "column",
+          "align_items": "center",
+          "text_align": "center",
+          "gap": "4px"
+        }
+      },
+      
+      "screenshot_carousel": {
+        "structure": {
+          "display": "flex",
+          "overflow_x": "auto",
+          "gap": "12px",
+          "padding": "16px 0",
+          "scroll_snap_type": "x mandatory",
+          "scrollbar_width": "none"
+        },
+        "screenshot_item": {
+          "flex_shrink": 0,
+          "width": "200px",
+          "aspect_ratio": "9/19.5",
+          "border_radius": "12px",
+          "overflow": "hidden",
+          "border": "0.5px solid rgba(255,255,255,0.1)",
+          "scroll_snap_align": "start",
+          "box_shadow": "0 4px 12px rgba(0,0,0,0.2)"
+        },
+        "device_frame": {
+          "show_device": true,
+          "device_color": "dark",
+          "show_notch": true
+        }
+      },
+      
+      "description_section": {
+        "structure": {
+          "padding": "16px 0",
+          "border_bottom": "0.5px solid rgba(255,255,255,0.1)"
+        },
+        "expand_button": {
+          "color": "interactive.link",
+          "font_size": "14px",
+          "font_weight": "400",
+          "text_decoration": "none",
+          "display": "inline-flex",
+          "align_items": "center",
+          "gap": "4px"
+        }
+      },
+      
+      "ratings_section": {
+        "structure": {
+          "padding": "16px 0",
+          "border_bottom": "0.5px solid rgba(255,255,255,0.1)"
+        },
+        "empty_state": {
+          "text": "This app hasn't received enough ratings or reviews to display an average.",
+          "color": "text.secondary",
+          "font_size": "14px"
+        }
+      },
+      
+      "whats_new": {
+        "structure": {
+          "padding": "16px 0",
+          "border_bottom": "0.5px solid rgba(255,255,255,0.1)"
+        },
+        "version_row": {
+          "display": "flex",
+          "justify_content": "space-between",
+          "margin_bottom": "8px"
+        },
+        "version_number": {
+          "font_size": "13px",
+          "color": "text.secondary"
+        },
+        "time_ago": {
+          "font_size": "13px",
+          "color": "text.tertiary"
+        },
+        "changes_list": {
+          "list_style": "none",
+          "padding": 0,
+          "margin": "8px 0"
+        },
+        "change_item": {
+          "padding_left": "16px",
+          "position": "relative",
+          "margin_bottom": "4px",
+          "before_content": "•",
+          "before_position": "absolute",
+          "before_left": 0
+        }
+      },
+      
+      "privacy_section": {
+        "structure": {
+          "padding": "16px 0"
+        },
+        "data_category": {
+          "margin_bottom": "16px"
+        },
+        "category_header": {
+          "display": "flex",
+          "align_items": "center",
+          "gap": "8px",
+          "margin_bottom": "12px"
+        },
+        "category_icon": {
+          "width": "28px",
+          "height": "28px",
+          "border_radius": "6px",
+          "background": "primary.surface",
+          "display": "flex",
+          "align_items": "center",
+          "justify_content": "center"
+        },
+        "data_type_list": {
+          "display": "grid",
+          "grid_template_columns": "repeat(2, 1fr)",
+          "gap": "8px"
+        },
+        "data_type_item": {
+          "display": "flex",
+          "align_items": "center",
+          "gap": "8px",
+          "padding": "8px",
+          "background": "primary.surface",
+          "border_radius": "8px"
+        }
+      },
+      
+      "information_list": {
+        "structure": {
+          "padding": "16px 0"
+        },
+        "info_row": {
+          "display": "flex",
+          "justify_content": "space-between",
+          "padding": "12px 0",
+          "border_bottom": "0.5px solid rgba(255,255,255,0.1)"
+        },
+        "label": {
+          "font_size": "14px",
+          "color": "text.primary"
+        },
+        "value": {
+          "font_size": "14px",
+          "color": "text.secondary",
+          "text_align": "right"
+        }
+      },
+      
+      "link_button": {
+        "structure": {
+          "display": "inline-flex",
+          "align_items": "center",
+          "gap": "4px",
+          "color": "interactive.link",
+          "font_size": "14px",
+          "text_decoration": "none",
+          "padding": "8px 0"
+        },
+        "icon": {
+          "width": "12px",
+          "height": "12px",
+          "transform": "rotate(-45deg)"
+        }
+      }
+    },
+    
+    "patterns": {
+      "divider": {
+        "height": "0.5px",
+        "background": "rgba(255,255,255,0.1)",
+        "margin": "16px 0"
+      },
+      
+      "expandable_text": {
+        "max_lines_collapsed": 3,
+        "transition": "max-height 0.3s ease",
+        "show_more_text": "more",
+        "show_less_text": "less"
+      },
+      
+      "icon_with_label": {
+        "layout": "vertical",
+        "align": "center",
+        "gap": "4px",
+        "icon_size": "24px"
+      },
+      
+      "card": {
+        "background": "primary.surface",
+        "border_radius": "12px",
+        "padding": "16px",
+        "border": "0.5px solid rgba(255,255,255,0.1)"
+      }
+    },
+    
+    "interactions": {
+      "tap_highlight": {
+        "background": "rgba(255,255,255,0.05)",
+        "transition": "background 0.15s ease"
+      },
+      
+      "scroll_behavior": {
+        "snap_type": "x mandatory",
+        "snap_align": "start",
+        "scroll_padding": "16px"
+      },
+      
+      "transitions": {
+        "default": "all 0.2s ease",
+        "expand": "max-height 0.3s ease-in-out",
+        "fade": "opacity 0.2s ease"
+      }
+    },
+    
+    "accessibility": {
+      "min_tap_target": "44px",
+      "contrast_ratio": "4.5:1",
+      "focus_indicator": {
+        "outline": "2px solid #0A84FF",
+        "outline_offset": "2px",
+        "border_radius": "4px"
+      },
+      "screen_reader": {
+        "use_semantic_html": true,
+        "aria_labels": true,
+        "heading_hierarchy": true
+      }
+    },
+    
+    "responsive_behavior": {
+      "breakpoints": {
+        "mobile": "320px",
+        "tablet": "768px",
+        "desktop": "1024px"
+      },
+      "adaptations": {
+        "mobile": {
+          "padding": "16px",
+          "screenshot_width": "200px",
+          "metadata_columns": 3
+        },
+        "tablet": {
+          "padding": "24px",
+          "screenshot_width": "250px",
+          "metadata_columns": 4
+        }
+      }
+    },
+    
+    "design_principles": [
+      "Use dark mode optimized colors with high contrast",
+      "Apply subtle borders and shadows for depth",
+      "Maintain consistent 16px base spacing",
+      "Use SF Pro font family for iOS authenticity",
+      "Implement smooth transitions for interactions",
+      "Group related information with dividers",
+      "Use icon + label patterns for metadata",
+      "Show device frames for screenshots",
+      "Collapse long text with expand/collapse",
+      "Use cards for elevated content sections",
+      "Maintain Apple's minimalist design language",
+      "Ensure all interactive elements are 44px minimum",
+      "Use blue accent color for all links and CTAs"
+    ]
+  }
+}
