@@ -202,7 +202,26 @@
         /* Screenshot Carousel Component */
         .screenshot-section {
             margin-bottom: 0;
-            padding: 16px 24px 0 24px;
+            padding: 16px 0 0 0;
+        }
+
+        .screenshot-carousel {
+            display: flex;
+            overflow-x: auto;
+            gap: 12px;
+            padding: 0 0 16px 0;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            scroll-padding-left: 24px;
+        }
+
+        .screenshot-item:first-child {
+            margin-left: 24px;
+        }
+
+        .screenshot-item:last-child {
+            margin-right: 24px;
         }
 
         .device-compatibility {
@@ -214,6 +233,8 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            padding-left: 24px;
+            padding-right: 24px;
         }
 
         .device-icon {
@@ -235,7 +256,7 @@
             display: flex;
             overflow-x: auto;
             gap: 12px;
-            padding: 16px 0;
+            padding: 0 0 16px 24px;
             scroll-snap-type: x mandatory;
             scrollbar-width: none;
             -ms-overflow-style: none;
