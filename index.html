@@ -604,12 +604,12 @@
             <div class="title-section">
                 <h1 class="app-title">Digital Tasbeeh Counter</h1>
                 <p class="app-developer">MARS Developers</p>
-                <a href="https://digital-tasbeeh.github.io/" class="get-button" target="_blank" rel="noopener noreferrer">
+                <button class="get-button" onclick="shareApp()">
                     <svg class="share-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 4V16M12 4L8 8M12 4L16 8M4 17V19C4 19.5304 4.21071 20.0391 4.58579 20.4142C4.96086 20.7893 5.46957 21 6 21H18C18.5304 21 19.0391 20.7893 19.4142 20.4142C19.7893 20.0391 20 19.5304 20 19V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     <span>Share</span>
-                </a>
+                </button>
             </div>
         </div>
 
@@ -702,21 +702,6 @@
             <button class="expand-button" id="expandButton" onclick="toggleDescription()">more</button>
         </div>
 
-        <script>
-            function toggleDescription() {
-                const content = document.getElementById('descriptionContent');
-                const button = document.getElementById('expandButton');
-                
-                if (content.classList.contains('expanded')) {
-                    content.classList.remove('expanded');
-                    button.textContent = 'more';
-                } else {
-                    content.classList.add('expanded');
-                    button.textContent = 'less';
-                }
-            }
-        </script>
-
         <!-- What's New Section -->
         <div class="whats-new-section">
             <h2 class="section-header">What's New</h2>
@@ -773,5 +758,7 @@
             <p class="copyright">© 2026 MARS Developers. All rights reserved.</p>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
