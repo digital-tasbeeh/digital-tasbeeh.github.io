@@ -1,0 +1,38 @@
+# robots.txt for Digital Tasbeeh Counter
+# https://digital-tasbeeh.github.io/
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /privacy-policy.html
+
+# Sitemap location
+Sitemap: https://digital-tasbeeh.github.io/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
+
+# Disallow specific files if needed
+Disallow: /design.json
+Disallow: /aso.json
+Disallow: /.git/
+Disallow: /.vscode/
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
