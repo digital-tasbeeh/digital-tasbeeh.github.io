@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.pixelwebstudio7.digital_tasbeeh",
+      "sha256_cert_fingerprints": [
+        "70:2A:E0:93:D6:62:69:4D:E4:39:19:18:1E:0E:EA:D5:3A:B7:DF:C3:BC:F7:2B:50:B6:5D:07:E2:56:9E:E8:97"
+      ]
+    }
+  }
+]
